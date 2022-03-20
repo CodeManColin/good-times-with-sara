@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+
+import React, {useState} from "react";
 import './App.css';
 
+import ImageJournal from "./components/ImageJournal";
+
+
 function App() {
+ 
+ const [memorySlides, setMemorySlides] = useState(false);
+
+ const startMemories = () => {
+   setMemorySlides(prevMemory => !prevMemory);
+ }
+
+ 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Good times with Sara</h1>
+         <nav className="App-nav">
+          <h3 onClick={startMemories} className="App-nav-memories">Memories</h3>
+          <h3 className="App-nav-getaways">Getaways</h3>
+         </nav>
+       </header>
+    <section className="App-section-1">
+    <h1>Image Journal</h1>
+  {memorySlides === true ? <ImageJournal /> : null}
+    </section>
     </div>
   );
 }
