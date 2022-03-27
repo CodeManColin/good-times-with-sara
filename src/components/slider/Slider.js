@@ -5,7 +5,6 @@ import Dots from "./Dots";
 import memories from "../../images/memoriesImageArray";
 import getaways from "../../images/getawaysImageArray";
 
-
 export default function Slider({ memorySlides, getawaySlides }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -31,7 +30,7 @@ export default function Slider({ memorySlides, getawaySlides }) {
         getaways={getaways}
         getawaySlides={getawaySlides}
       />
-        <Dots
+      <Dots
         activeIndex={activeIndex}
         memories={memories}
         getaways={getaways}

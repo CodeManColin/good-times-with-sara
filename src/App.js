@@ -16,7 +16,7 @@ function App() {
     if (getawaySlides) {
       setGetawaySlides((prevGetaway) => !prevGetaway);
     }
-  }
+  };
 
   const startGetaways = () => {
     setGetawaySlides((prevGetaway) => !prevGetaway);
@@ -39,8 +39,7 @@ function App() {
           <Slider memorySlides={memorySlides} getawaySlides={getawaySlides} />
         ) : (
           <img className="heart-placeholder" src={heartLogo} alt="heart-logo" />
-           )}
-        
+        )}
       </section>
       <Footer />
     </div>

@@ -7,11 +7,14 @@ export default function Nav(props) {
     <nav className="Nav">
       <h3
         onClick={startMemories}
-        className={memorySlides ? "nav-memories-clicked" : "nav-memories" }
+        className={memorySlides ? "nav-memories-clicked" : "nav-memories"}
       >
         Memories
       </h3>
-      <h3 onClick={startGetaways} className="nav-getaways">
+      <h3 
+        onClick={startGetaways} 
+        className={getawaySlides ? "nav-getaways-clicked" : "nav-getaways"}
+      >
         Getaways
       </h3>
     </nav>
