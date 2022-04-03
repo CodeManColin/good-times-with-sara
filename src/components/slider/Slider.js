@@ -8,12 +8,12 @@ import getaways from "../../images/getawaysImageArray";
 export default function Slider({ memorySlides, getawaySlides }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex(activeIndex);
-    });
-    return () => clearInterval(interval);
-  }, [activeIndex]);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setActiveIndex(activeIndex);
+  //   });
+  //   return () => clearInterval(interval);
+  // }, [activeIndex]);
 
   return (
     <div className="slider-container">
@@ -32,9 +32,11 @@ export default function Slider({ memorySlides, getawaySlides }) {
       />
       <Dots
         activeIndex={activeIndex}
+        onclick={(activeIndex) => setActiveIndex(activeIndex)}
         memories={memories}
         getaways={getaways}
-        onclick={(activeIndex) => setActiveIndex(activeIndex)}
+        memorySlides={memorySlides}
+        getawaySlides={getawaySlides}
       />
     </div>
   );

@@ -3,16 +3,12 @@
   margin: 0;
 }
 
-:root {
-  --heights: 50vh;
-  --widths: 100%;
-}
-
 /*  --- Body --- */
 
 body {
   margin: 0;
   padding: 0;
+  background-color: rgb(217, 215, 210);
 }
 
 /*  --- App --- */
@@ -33,20 +29,49 @@ body {
   font-family: "Courier New", Courier, monospace;
   /* background-color: #b3e4eb; */
   background-image: linear-gradient(60deg, #689297, #b3e4eb);
-  color: #0d4047;
+  color: #134f56;
   height: 130px;
   text-align: center;
-  align-items: center;
   box-shadow: 0px 8px 10px grey;
   padding-top: 10px;
-  padding-bottom: 50px;
   margin-bottom: 20px;
 }
+
 
 .header-title {
   padding-top: 20px;
   text-shadow: 0px 5px 5px grey;
+  margin: auto;
+  font-size: 30px;
+  max-width: 600px;
+  position: relative;
 }
+
+.header-title:before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  margin-top: 7px;
+  background: #134f5687;
+  left: 0;
+  top: 50%;
+  position: absolute;
+}
+ 
+.header-title:after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  margin-top: 7px;
+  background: #134f5687;
+  right: 0;
+  top: 50%;
+  position: absolute;
+} 
+
+
 
 /*  --- Nav --- */
 
@@ -60,9 +85,35 @@ body {
 }
 
 .nav-memories {
-  margin-right: 40px;
+  /* margin-right: 40px; */
   cursor: pointer;
   text-shadow: 0px 5px 5px grey;
+  width: 220px;
+  /* margin: auto; */
+  max-width: 500px;
+  position: relative;
+}
+
+.nav-memories:before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #134f5687;
+  left: 0;
+  top: 50%;
+  position: absolute;
+}
+
+.nav-memories:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #134f5687;
+  right: 0;
+  top: 50%;
+  position: absolute;
 }
 
 .nav-memories:hover {
@@ -70,27 +121,105 @@ body {
 }
 
 .nav-memories-clicked {
-  color: #038da5;
-  margin-right: 40px;
+  color: #026a8d;
+  /* margin-right: 40px; */
   cursor: pointer;
   text-shadow: 0px 5px 5px grey;
+  width: 220px;
+  /* margin: auto; */
+  max-width: 500px;
+  position: relative;
+}
+
+.nav-memories-clicked:before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #134f5687;
+  left: 0;
+  top: 50%;
+  position: absolute;
+}
+
+.nav-memories-clicked:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #134f5687;
+  right: 0;
+  top: 50%;
+  position: absolute;
 }
 
 .nav-getaways {
-  margin-left: 40px;
+  /* margin-left: 40px; */
   cursor: pointer;
   text-shadow: 0px 5px 5px grey;
+  width: 220px;
+  /* margin: auto; */
+  max-width: 500px;
+  position: relative;
 }
 
 .nav-getaways:hover {
   color: #038da5;
 }
 
-.nav-getwaways-clicked {
-  color: #038da5;
-  margin-right: 40px;
+.nav-getaways:before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #134f5687;
+  left: 0;
+  top: 50%;
+  position: absolute;
+}
+
+.nav-getaways:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #134f5687;
+  right: 0;
+  top: 50%;
+  position: absolute;
+}
+
+.nav-getaways-clicked {
+  color: #026a8d;
+  /* margin-left: 40px; */
   cursor: pointer;
   text-shadow: 0px 5px 5px grey;
+  width: 220px;
+  /* margin: auto; */
+  max-width: 500px;
+  position: relative;
+}
+
+.nav-getaways-clicked:before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #134f5687;
+  left: 0;
+  top: 50%;
+  position: absolute;
+}
+
+.nav-getaways-clicked:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #134f5687;
+  right: 0;
+  top: 50%;
+  position: absolute;
 }
 
 /*  --- Image Journal --- */
@@ -98,32 +227,74 @@ body {
 .image-journal {
   font-family: "Courier New", Courier, monospace;
   height: 500px;
+  color: rgba(12, 11, 6, 0.61);
   background-image: linear-gradient(
     80deg,
     rgb(173, 137, 103),
     rgb(250, 241, 228)
   );
-  background-color: rgb(250, 235, 212);
-  color: rgba(12, 11, 6, 0.61);
   box-shadow: 0px 8px 10px grey;
+  justify-content: center; 
+}
+
+
+.image-journal-icon-container {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
+  padding-top: 20px;
+}
+
+.image-journal-icon {
+  margin: 0px 20px 0px 20px;
+}
+
+.image-journal-icon-left {
+  margin: 0px 40px 0px 20px;
+}
+
+.image-journal-icon-right {
+  margin: 0px 20px 0px 40px;
 }
 
 .image-journal-title {
-  padding-top: 20px;
+  color: rgba(12, 11, 6, 0.61);
   font-size: 30px;
   font-weight: bold;
+  border-bottom: 2px solid rgba(12, 11, 6, 0.61);
 }
+
+/* .image-journal-title:before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  margin-top: 7px;
+  background: rgba(12, 11, 6, 0.61);
+  left: 0;
+  top: 50%;
+  position: absolute;
+}
+
+.image-journal-title:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  margin-top: 7px;
+  background: rgba(12, 11, 6, 0.61);
+  right: 0;
+  top: 50%;
+  position: absolute;
+} */
 
 /*  --- Slider --- */
 
 .slider-container {
-  /* height: var(--heights); */
   height: 440px;
   width: var(--widths);
   position: relative;
   margin: auto;
-  /* overflow: hidden; */
   background-image: linear-gradient(
     80deg,
     rgb(173, 137, 103),
@@ -156,11 +327,14 @@ body {
 }
 
 .slider-title {
+  font-family: Papyrus;
   text-align: center;
+  font-style: italic;
   margin-top: 10px;
   margin-left: 40px;
+  padding-top: 10px;
   padding-bottom: 20px;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   animation: fadeIn linear 1s;
 }
@@ -189,10 +363,12 @@ body {
 }
 
 .slide-image {
+  background-color: rgba(36, 35, 18, 0.897);
+  border-style:initial;
   height: 300px;
   width: 600px;
-  box-shadow: 0px 10px 20px grey;
-  object-fit: cover;
+  box-shadow: 0px 15px 15px grey;
+  object-fit: contain;
   animation: fadeIn 2s;
 }
 @keyframes fadeIn {
@@ -254,7 +430,6 @@ body {
 
 .Dots {
   width: 100%;
-  height: 100%;
   position: absolute;
   display: flex;
   top: 85%;
@@ -274,8 +449,8 @@ body {
 
 .dot {
   cursor: pointer;
-  height: 1.1rem;
-  width: 1.1rem;
+  height: 0.7rem;
+  width: 0.7rem;
   margin: 0px 3px;
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 50%;
@@ -293,9 +468,15 @@ body {
   font-family: "Courier New", Courier, monospace;
   margin-top: 20px;
   padding-bottom: 20px;
+   /* background-color: #b3e4eb; */
   background-image: linear-gradient(60deg, #689297, #b3e4eb);
-  /* background-color: #b3e4eb; */
   box-shadow: 0px 5px 10px grey;
   height: 100px;
   line-height: 100px;
+}
+
+.footer-text {
+  color: #0d4047;
+  box-shadow: 0px 8px 10px grey;
+  font-weight: bold;
 }
