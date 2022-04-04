@@ -187,7 +187,7 @@ const memories = [
   },
   {
     image: memory47,
-  }
+  },
 ];
 
 export default memories;

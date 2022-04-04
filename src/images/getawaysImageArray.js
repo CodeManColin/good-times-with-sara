@@ -64,7 +64,6 @@ import getaway57 from "../images/getawayPics/getaway-57.jpeg";
 import getaway58 from "../images/getawayPics/getaway-58.jpeg";
 import getaway59 from "../images/getawayPics/getaway-59.jpeg";
 
-
 const getaways = [
   {
     image: getaway1,

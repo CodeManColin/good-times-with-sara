@@ -43,7 +43,7 @@ function App() {
         memorySlides={memorySlides}
         getawaySlides={getawaySlides}
       />
-    
+
       <section className="image-journal">
         <div className="image-journal-icon-container">
           <FaShuttleVan size={30} className="image-journal-icon" />
@@ -58,7 +58,6 @@ function App() {
           <img className="heart-placeholder" src={heartLogo} alt="heart-logo" />
         )}
       </section>
-    
       <Footer />
     </div>
   );
